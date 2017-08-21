@@ -1,0 +1,10 @@
+Conceptos avanzados (Estructura del documento)
+
+
+Matemáticas: Ambientes equation, gather, multiline, split y align 
+(se debe usar \usepackage{amsmath})
+
+
+
+
+

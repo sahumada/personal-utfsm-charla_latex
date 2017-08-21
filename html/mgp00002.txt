@@ -1,0 +1,13 @@
+¿Qué es LaTeX?
+
+
+TeX (Donald Knuth, 1978)
+Sistema de composición tipográfica de textos
+Introducción del texto
+Preparación con su formato
+Presentación en pantalla
+
+LaTeX (Leslie Lamport, 1985)
+Conjunto de macros construidas a partir de TeX
+Procesador de textos orientado a documentos científicos
+

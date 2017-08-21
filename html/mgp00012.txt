@@ -1,0 +1,9 @@
+Conceptos avanzados (Estructura del documento)
+
+
+Separar las estrofas con \\ y \\[10pt]
+Índices: Comando \tableofcontents, \listoffigures y \listoftables
+Referencias: \label{}, \ref{} y \pageref{}
+\label{fig:fig_uno}
+Véase la Figura~\ref{fig:fig_uno} en la página~\pageref{fig:fig_uno}
+

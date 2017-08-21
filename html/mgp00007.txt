@@ -1,0 +1,14 @@
+Sintaxis básica
+
+
+ #	: Indica el número de argumentos de una macro
+ $	: Marca el inicio o fin del modo matemático simple
+ \	: Indica el uso de un comando definido
+ %	: Antecede a un comentario
+ &	: Separador de columnas (alineamiento)
+ _	: Indica un subindice en modo matemático
+ {}	: Contiene el argumento para un comando
+ ~	: Deja un espacio entre dos palabras
+ ^	: Indica un superindice en modo matemático
+ []	: Parámetros que modifican un comando
+

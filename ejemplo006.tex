@@ -1,0 +1,32 @@
+\documentclass[letterpaper,12pt,notitlepage]{report}
+\usepackage[spanish]{babel}
+\usepackage[dvips]{epsfig}
+\usepackage[latin1]{inputenc}
+\usepackage{tabularx}
+
+\oddsidemargin  0cm  % Ancho Letter 21,59cm
+\evensidemargin 0cm  % Alto  Letter 27,81cm
+\textwidth      16cm
+\topmargin      -2cm
+\textheight     23cm
+\parindent      0em
+\parskip        2ex
+
+\newcommand{\PreserveBackslash}[1]{\let\temp=\\#1\let\\=\temp}
+\let\PBS=\PreserveBackslash
+\renewcommand{\familydefault}{ccr}
+
+\begin{document}
+
+\pagestyle{empty}
+
+\hspace{-0.6cm}
+\begin{tabular}{c >{\PBS\centering\vspace{-2cm}}p{10cm} c}
+ \epsfig{file=logo_inf.eps,width=65pt} &
+ \rule{10cm}{0.5pt} \newline
+ \textsc{{\large Departamento de Informática} \newline Universidad Técnica Federico Santa María} \newline
+ \rule{10cm}{0.5pt} &
+ \epsfig{file=logo_usm.eps,width=70pt}
+\end{tabular}
+
+\end{document}

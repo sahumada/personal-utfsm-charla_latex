@@ -1,0 +1,15 @@
+Sintaxis básica
+
+
+Carácteres especiales (deben ser "escapados")
+ #        \# 
+ $        \$
+ %        \% 
+ &        \&
+ _        \_
+ {        \{
+ }        \}
+ ~        \verb'~'
+ ^        \verb'^'
+ \        \verb'\'
+

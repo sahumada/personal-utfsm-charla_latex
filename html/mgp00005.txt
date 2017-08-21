@@ -1,0 +1,16 @@
+Edición y Procesamiento 
+
+
+Estructura:
+Clase del documento (article, report, book, letter)
+Opciones de cada clase
+Preámbulo
+Cuerpo del documento
+
+Comandos para compilar ejemplo1.tex: 
+latex ejemplo1.tex / pdflatex ejemplo1.tex
+dvips -t letter ejemplo1.dvi -o ejemplo1.ps
+ps2pdf ejemplo1.ps
+gv ejemplo1.ps
+acroread ejemplo1.pdf
+

@@ -1,0 +1,15 @@
+Características
+              
+
+Uso de archivo de texto para instrucciones
+Esfuerzo de usuario en contenido, no en apariencia
+Independiente de la plataforma
+Manejo de referencias cruzadas
+Capítulos
+Secciones
+Ecuaciones
+Figuras
+Tablas
+
+Software libre de alta calidad
+

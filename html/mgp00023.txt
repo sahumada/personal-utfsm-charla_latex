@@ -1,0 +1,10 @@
+TIPS
+
+
+Números reales   : \mathbb{R}   
+Números complejos: \mathbb{C}   
+Necesita \usepackage{amssymb}
+Cases:
+
+
+

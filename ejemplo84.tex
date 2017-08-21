@@ -1,0 +1,28 @@
+\documentclass[letterpaper,12pt]{article}
+\usepackage[latin1]{inputenc}
+\usepackage{algorithm}
+\usepackage{algorithmic}
+
+\begin{document}
+\pagestyle{empty}
+\thispagestyle{empty}
+
+\noindent
+
+\begin{algorithm}
+\caption{Generación de las primeras $T$ unidades de tiempo de un proceso Poisson}
+\label{alg:algoritmo}
+\begin{algorithmic}
+\STATE $t \gets 0$
+\STATE $I \gets 0$
+\WHILE {$t < T$}
+\STATE Generar un número aleatorio $U$
+\STATE Generar una exponencial $E = -1/\lambda \,\, \mbox{ln} \, U$
+\STATE $t = t + E$.
+\STATE $I = I + 1$
+\STATE $S(I) = t$
+\ENDWHILE
+\end{algorithmic}
+\end{algorithm}
+
+\end{document}

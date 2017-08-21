@@ -1,0 +1,8 @@
+Conceptos avanzados (Estructura del documento)
+
+
+Tablas: Ambientes tabular y tabularx
+
+
+
+

@@ -1,0 +1,45 @@
+\documentclass[letterpaper,12pt]{article}
+\usepackage[latin1]{inputenc}
+\usepackage{algorithm}
+\usepackage{algorithmic}
+
+\begin{document}
+\pagestyle{empty}
+\thispagestyle{empty}
+
+\noindent
+\begin{verbatim}
+\documentclass[letterpaper,12pt,notitlepage]{report}
+\usepackage[spanish]{babel}
+\usepackage[dvips]{epsfig}
+\usepackage[latin1]{inputenc}
+
+\oddsidemargin  0cm  % Suma 0cm al margen izquierdo página impar
+\evensidemargin 0cm  % Suma 0cm al margen izquierdo página par
+\textwidth      16cm % Ancho del texto
+\topmargin      -2cm % Margen superior -2cm respecto predeterminado
+\textheight     23cm % Alto del texto
+\parindent      0em 
+\parskip        2ex
+
+\newcommand{\PreserveBackslash}[1]{\let\temp=\\#1\let\\=\temp}
+\let\PBS=\PreserveBackslash
+\renewcommand{\familydefault}{ccr}
+
+\begin{document}
+
+\pagestyle{empty}
+
+\hspace{-0.6cm}
+\begin{tabular}{c >{\PBS\centering\vspace{-2cm}}p{10cm} c}
+ \epsfig{file=logo_inf.eps,width=65pt} &
+ \rule{10cm}{0.5pt} \newline
+ \textsc{{\large Departamento de Informática} \newline Universidad Técnica Federico Santa María} \newline
+ \rule{10cm}{0.5pt} &
+ \epsfig{file=logo_usm.eps,width=70pt}
+\end{tabular}
+
+\end{document}
+
+\end{verbatim}
+\end{document}

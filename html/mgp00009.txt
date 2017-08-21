@@ -1,0 +1,15 @@
+Conceptos avanzados (Tipo de letra)
+
+
+
+\textrm{Esto es Roman}
+\textsf{Esto es Sans Serif}
+\textsc{Esto es Mayúsulas}
+\textit{Esto es Cursiva}
+\textbf{Esto es Negrita}
+\texttt{Esto es Literal}
+\emph{Esto es Enfatizado}
+\textnormal{Esto es Normal}
+
+
+

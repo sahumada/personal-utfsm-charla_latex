@@ -1,0 +1,29 @@
+Conceptos básicos usando un ejemplo
+
+
+  % ejemplo1.tex
+  \documentclass[letterpaper,11pt]{article}
+  \usepackage[latin1]{inputenc}
+  \usepackage[spanish]{babel}
+  
+  \author{Sergio Ahumada Navea}
+  \title{Primer ejemplo LaTeX}
+  \date{\today}
+ 
+  \begin{document}
+   \maketitle
+
+   \begin{abstract}
+    Resumen del documento
+   \end{abstract}
+ 
+   \section{Introducción}
+    De lo que trata el documento
+ 
+   \section{Conclusiones}
+    Las típicas conclusiones
+
+  \end{document}
+
+
+

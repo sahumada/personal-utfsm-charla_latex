@@ -1,0 +1,408 @@
+%deffont "standard"   tfont "standard.ttf",   tmfont "kochi-mincho.ttf"
+%deffont "thick"      tfont "thick.ttf",      tmfont "goth.ttf"
+%deffont "typewriter" tfont "typewriter.ttf", tmfont "goth.ttf"
+%default 1 size 7, vgap 10, prefix " ", leftfill
+%default 2 size 2, bar "gray70", vgap 10
+%default 3 size 5, vgap 30, fore "white"
+%tab 1 size 5, vgap 100, prefix "  ", icon box "green" 50
+%tab 2 size 4.5, vgap 70, prefix "      ", icon arc "yellow" 50
+%tab 3 size 4, vgap 50, prefix "            ", icon delta3 "red" 40
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+%charset "iso8859-1"
+%nodefault
+%center, tfont "arialbd.ttf", size 8, fore "white", vgap 20
+
+
+%image "tex.xbm" 800x600
+%cont
+     Mini-Charla LaTeX
+%cont
+%image "mf.xbm" 800x600
+
+ Depto. Informática UTFSM
+
+
+
+%size 5, fore "yellow"
+Sergio Ahumada N
+san@inf.utfsm.cl
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+¿Qué es LaTeX?
+
+
+	TeX (Donald Knuth, 1978)
+		Sistema de composición tipográfica de textos
+			Introducción del texto
+			Preparación con su formato
+			Presentación en pantalla
+
+	LaTeX (Leslie Lamport, 1985)
+		Conjunto de macros construidas a partir de TeX
+		Procesador de textos orientado a documentos científicos
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+Características
+
+
+	Uso de archivo de texto para instrucciones
+	Esfuerzo de usuario en contenido, no en apariencia
+	Independiente de la plataforma
+	Manejo de referencias cruzadas
+		Capítulos
+		Secciones
+		Ecuaciones
+		Figuras
+		Tablas
+
+	Software libre de alta calidad
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+Conceptos básicos usando un ejemplo
+
+
+%size 3, tfont "arial.ttf"
+  % ejemplo1.tex
+  \\documentclass[letterpaper,11pt]{article}
+  \\usepackage[latin1]{inputenc}
+  \\usepackage[spanish]{babel}
+
+  \\author{Sergio Ahumada Navea}
+  \\title{Primer ejemplo LaTeX}
+  \\date{\\today}
+
+  \\begin{document}
+   \\maketitle
+
+   \\begin{abstract}
+    Resumen del documento
+   \\end{abstract}
+
+   \\section{Introducción}
+    De lo que trata el documento
+
+   \\section{Conclusiones}
+    Las típicas conclusiones
+
+  \\end{document}
+
+%area 50 80 50 15
+%newimage -zoom 150 "ejemplo1.eps"
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+Edición y Procesamiento
+
+
+	Estructura:
+		Clase del documento (article, report, book, letter)
+		Opciones de cada clase
+		Preámbulo
+		Cuerpo del documento
+
+	Comandos para compilar ejemplo1.tex:
+		latex ejemplo1.tex / pdflatex ejemplo1.tex
+		dvips -t letter ejemplo1.dvi -o ejemplo1.ps
+		ps2pdf ejemplo1.ps
+		gv ejemplo1.ps
+		acroread ejemplo1.pdf
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+Sintaxis básica
+
+
+	Carácteres especiales (deben ser "escapados")
+		 #        \\#
+		 $        \\$
+		 %        \\%
+		 &        \\&
+		 _        \\_
+		 {        \\{
+		 }        \\}
+		 ~        \\verb'~'
+		 ^        \\verb'^'
+		 \\        \\verb'\\'
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+Sintaxis básica
+
+
+		 #	: Indica el número de argumentos de una macro
+		 $	: Marca el inicio o fin del modo matemático simple
+		 \\	: Indica el uso de un comando definido
+		 %	: Antecede a un comentario
+		 &	: Separador de columnas (alineamiento)
+		 _	: Indica un subindice en modo matemático
+		 {}	: Contiene el argumento para un comando
+		 ~	: Deja un espacio entre dos palabras
+		 ^	: Indica un superindice en modo matemático
+		 []	: Parámetros que modifican un comando
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+Sintaxis básica
+
+
+	Comandos de LaTeX
+		Comienzan con el carácter "\\" y les sigue un identificador
+		Todos los comandos terminan con "{argumento}"
+		Ejemplos:
+			\\documentclass[letterpaper,12pt]{article}
+			\\usepackage{tabularx}
+			\\title{}
+			\\date{}
+			\\begin{}
+			\\section{}
+			\\end{}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+Conceptos avanzados (Tipo de letra)
+
+
+
+	\\textrm{Esto es Roman}
+	\\textsf{Esto es Sans Serif}
+	\\textsc{Esto es Mayúsulas}
+	\\textit{Esto es Cursiva}
+	\\textbf{Esto es Negrita}
+	\\texttt{Esto es Literal}
+	\\emph{Esto es Enfatizado}
+	\\textnormal{Esto es Normal}
+
+%area 40 80 90 21
+%newimage -zoom 150 "ejemplo2.eps"
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+Conceptos avanzados (Tamaño de letra)
+
+
+	\\tiny{Esto es tiny}
+	\\scriptsize{Esto es scriptsize}
+	\\footnotesize{Esto es footnotesize}
+	\\small{Esto es small}
+	\\normalsize{Esto es normalsize}
+	\\large{Esto es large}
+	\\Large{Esto es Large}
+	\\LARGE{Esto es LARGE}
+	\\huge{Esto es huge}
+	\\Huge{Esto es Huge}
+
+%area 40 80 90 15
+%newimage -zoom 150 "ejemplo3.eps"
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+Conceptos avanzados (Estructura del documento)
+
+
+	Datos para portada: \\title{}, \\author{}, \\date{} y \\maketitle
+	Preámbulo: \\usepackage{}, \\newcommand{}, etc
+	Resumen: Entorno "abstract" \\begin{abstract} \\end{abstract}
+	Secciones: \\section{}, \\subsection{}, \\subsubsection{}, \\paragraph{}, \\subparagraph{}
+	Notas al pie: \\footnote{}, \\footnotetext{} y \\footnotemark
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+Conceptos avanzados (Estructura del documento)
+
+
+	Separar las estrofas con \\\\ y \\\\[10pt]
+	Índices: Comando \\tableofcontents, \\listoffigures y \\listoftables
+	Referencias: \\label{}, \\ref{} y \\pageref{}
+		\\label{fig:fig_uno}
+		Véase la Figura~\\ref{fig:fig_uno} en la página~\\pageref{fig:fig_uno}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+Conceptos avanzados (Estructura del documento)
+
+
+	Inclusión de código: Entornos verbatim y verb
+
+%area 40 80 10 40
+%newimage -zoom 150 "ejemplo4.eps"
+%area 40 80 90 40
+%newimage -zoom 150 "ejemplo5.eps"
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+Conceptos avanzados (Estructura del documento)
+
+
+	Justificación: Uso de entornos center, flushright y flushleft
+		\\begin{center}, \\end{center}, etc
+	Listas
+		Listas numeradas
+
+%area 40 80 20 58
+%newimage -zoom 150 "ejemplo61.eps"
+%area 40 80 65 55
+%newimage -zoom 150 "ejemplo62.eps"
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+Conceptos avanzados (Estructura del documento)
+
+
+	Listas
+		Listas no numeradas
+
+%area 40 80 20 47
+%newimage -zoom 150 "ejemplo71.eps"
+%area 40 80 65 45
+%newimage -zoom 150 "ejemplo72.eps"
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+Conceptos avanzados (Estructura del documento)
+
+
+	Figuras: Ambiente figure y subfigure
+
+%area 40 80 10 33
+%newimage -zoom 140 "ejemplo731.eps"
+%area 40 80 35 45
+%newimage -zoom 130 "ejemplo741.eps"
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+Conceptos avanzados (Estructura del documento)
+
+
+	Matemáticas: Ambientes equation, gather, multiline, split y align
+			(se debe usar \\usepackage{amsmath})
+
+%area 40 80 5 50
+%newimage -zoom 140 "ejemplo73.eps"
+%area 40 80 45 70
+%newimage -zoom 160 "ejemplo74.eps"
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+Conceptos avanzados (Estructura del documento)
+
+
+	Códigos: Ambiente listings
+
+%area 40 80 2 35
+%newimage -zoom 150 "ejemplo81.eps"
+%area 40 80 55 45
+%newimage -zoom 150 "ejemplo82.eps"
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+Conceptos avanzados (Estructura del documento)
+
+
+	Códigos: Ambientes algorithm y algorithmic
+
+%area 40 80 2 35
+%newimage -zoom 150 "ejemplo83.eps"
+%area 40 80 40 35
+%newimage -zoom 150 "ejemplo841.eps"
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+Conceptos avanzados (Estructura del documento)
+
+
+	Tablas: Ambientes tabular y tabularx
+
+%area 40 80 5 35
+%newimage -zoom 150 "ejemplo91.eps"
+%area 40 80 30 70
+%newimage -zoom 150 "ejemplo92.eps"
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+Conceptos avanzados (Estructura del documento)
+
+
+        Matrices: Ambiente array
+
+%area 40 80 5 35
+%newimage -zoom 140 "ejemplo103.eps"
+%area 40 80 25 60
+%newimage -zoom 160 "ejemplo104.eps"
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+Conceptos avanzados (Estructura del documento)
+
+
+	Matrices: Ambiente eqnarray
+
+%area 40 80 5 35
+%newimage -zoom 140 "ejemplo101.eps"
+%area 40 80 25 60
+%newimage -zoom 160 "ejemplo102.eps"
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+TIPS
+
+
+	Números reales   : \\mathbb{R}
+%cont
+%newimage -zoom 300 "ejemplo001.eps"
+	Números complejos: \\mathbb{C}
+%cont
+%newimage -zoom 300 "ejemplo002.eps"
+		Necesita \\usepackage{amssymb}
+	Cases:
+%area 40 80 15 45
+%newimage -zoom 150 "ejemplo004.eps"
+%area 40 80 15 75
+%newimage -zoom 200 "ejemplo003.eps"
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+TIPS
+
+
+	Posicionar una figura al lado de texto
+
+%area 40 80 10 27
+%newimage -zoom 150 "ejemplo711.eps"
+%area 40 80 20 80
+%newimage -zoom 100 "ejemplo721.jpg"
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+TIPS
+
+
+	Encabezado de la Universidad
+
+%area 40 80 15 23
+%newimage -zoom 125 "ejemplo005.eps"
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+TIPS
+
+
+	Encabezado de la Universidad
+
+%area 40 80 15 30
+%newimage -zoom 120 "ejemplo006.jpg"
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+LINKS
+
+
+	http://www.ctan.org/
+	http://www.miktex.org/
+	http://www.winedit.com/
+	http://www.vim.org/
+	http://www.darryl.com/vi.html

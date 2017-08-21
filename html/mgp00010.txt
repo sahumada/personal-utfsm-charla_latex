@@ -1,0 +1,16 @@
+Conceptos avanzados (Tamaño de letra)
+
+
+\tiny{Esto es tiny}
+\scriptsize{Esto es scriptsize}
+\footnotesize{Esto es footnotesize}
+\small{Esto es small}
+\normalsize{Esto es normalsize}
+\large{Esto es large}
+\Large{Esto es Large}
+\LARGE{Esto es LARGE}
+\huge{Esto es huge}
+\Huge{Esto es Huge}
+
+
+

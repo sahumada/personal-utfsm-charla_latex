@@ -1,0 +1,11 @@
+Conceptos avanzados (Estructura del documento)
+
+
+Justificación: Uso de entornos center, flushright y flushleft
+\begin{center}, \end{center}, etc
+Listas
+Listas numeradas
+
+
+
+

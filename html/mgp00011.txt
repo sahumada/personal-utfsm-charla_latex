@@ -1,0 +1,9 @@
+Conceptos avanzados (Estructura del documento)
+
+
+Datos para portada: \title{}, \author{}, \date{} y \maketitle
+Preámbulo: \usepackage{}, \newcommand{}, etc
+Resumen: Entorno "abstract" \begin{abstract} \end{abstract}
+Secciones: \section{}, \subsection{}, \subsubsection{}, \paragraph{}, \subparagraph{}
+Notas al pie: \footnote{}, \footnotetext{} y \footnotemark
+

@@ -1,0 +1,15 @@
+Sintaxis básica
+
+
+Comandos de LaTeX 
+Comienzan con el carácter "\" y les sigue un identificador
+Todos los comandos terminan con "{argumento}"
+Ejemplos: 
+\documentclass[letterpaper,12pt]{article}
+\usepackage{tabularx}
+\title{}
+\date{}
+\begin{}
+\section{}
+\end{}
+

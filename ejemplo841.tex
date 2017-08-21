@@ -1,0 +1,35 @@
+\documentclass[letterpaper,12pt]{article}
+\usepackage[latin1]{inputenc}
+\usepackage{algorithm}
+\usepackage{algorithmic}
+\usepackage{amsmath}
+
+\begin{document}
+\pagestyle{empty}
+\thispagestyle{empty}
+
+\noindent
+\begin{algorithm}
+ \caption{Algoritmo básico de Simulated Annealing}
+ \label{alg:alg_uno}
+ \begin{algorithmic}
+  \STATE $k \gets 0$
+  \STATE $i \gets i_{inic}$
+  \REPEAT
+  \FOR {$l=1$ to $L_k$}
+    \STATE Genera $j \in S$
+      \IF {$f(i) \le f(j)$}
+        \STATE  $i \gets j$
+      \ELSE
+        \IF {$\exp\bigg(\frac{f(i) - f(j)}{c_k}\bigg) > \text{random(0,1)}$}
+          \STATE $i \gets j$
+        \ENDIF
+      \ENDIF
+      \STATE $k \gets k+1$
+      \STATE Actualizar $L_k$ y $c_k$
+  \ENDFOR
+  \UNTIL hasta criterio de actualización.
+\end{algorithmic}
+\end{algorithm}
+
+\end{document}
